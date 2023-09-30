@@ -1,8 +1,5 @@
-# BD POKEAPI
-
-Este projeto é uma aplicação Flask que expõe uma API REST para operações de cadastro de consulta da Pokelista MVP
-![image](https://github.com/dreamkatana/mvc_pode_bd2/assets/7691411/a51fb788-f869-4882-98c3-c05b95936cc1)
-
+# BD UNIVESP
+Este projeto é uma aplicação Flask que expõe uma API REST para operações de cadastro de consulta da Univesp MVP
 ## Instalação
 
 ### Requisitos
@@ -13,12 +10,11 @@ Este projeto é uma aplicação Flask que expõe uma API REST para operações d
 
 ### Instruções DOCKER
 docker build -t mvc_bd . 
-Cadastrar o mesmo nome do docker_compose da aplicação frontend `https://github.com/dreamkatana/mvc_poke_front`.
-
+Cadastrar o mesmo nome do docker_compose da aplicação frontend.
 
 ### Instruções
 
-1. Clone o repositório para sua máquina local usando `[https://github.com/dreamkatana/mvc_pode_bd2/yourrepository.git](https://github.com/dreamkatana/mvc_pode_bd2.git)`.
+1. Clone o repositório para sua máquina local usando.
 
 2. Navegue até o diretório do projeto: `cd yourrepository`
 

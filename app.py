@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_smorest import Api
 from db import db
 import os
+from dotenv import load_dotenv
 from resources.busca_res import blp as BlueprintBusca
 
 
@@ -18,6 +19,8 @@ def criar_app(url_db=None):
     """
 
     app = Flask(__name__)
+
+    load_dotenv()
     app.config["API_TITLE"] = "API REST do BD da PokeLista"
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.3"

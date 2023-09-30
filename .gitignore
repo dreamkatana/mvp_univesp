@@ -6,3 +6,4 @@ models/__pycache__/__init__.cpython-310.pyc
 models/__pycache__/item.cpython-310.pyc
 resources/__pycache__/__init__.cpython-310.pyc
 resources/__pycache__/item.cpython-310.pyc
+.env

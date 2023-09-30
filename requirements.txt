@@ -1,0 +1,6 @@
+flask==2.3.3
+flask-smorest
+flask-sqlalchemy
+python-dotenv
+marshmallow
+gunicorn

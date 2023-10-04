@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}
+    Pokédex Flask MVC
+{% endblock %}
+{% block content %}
+    <!-- Cabeçalho da Pokédex -->
+    <div class="header">
+        <img id="titulo-img" src="{{ url_for('static', filename='pokelogo.png') }}" alt="Logo Pokémon">
+        <!-- Barra de pesquisa -->
+        <form action="/" method="post">
+            <input type="text" id="inputBusca" name="search" placeholder="Pesquise um Pokémon" oninput="verificaInput()">
+            <input type="submit" id="botaoEnviar" value="Pesquisar" disabled>
+        </form>
+    </div>
+    <br><br>
+    <!-- Container da Pokédex -->
+    <div class="container">
+        <ul class="pokemons">
+            <!-- Iterando sobre os pokémons e exibindo-os -->
+            {% for poke in pokemons %}
+            <li class="poke-container {{poke['types'][0]['type']['name']}}">
+                <div id="pokebola-icon">
+                    <h2 class="id">{{ poke['id'] }}</h2>
+                </div>
+                <h1 class="nome">{{ poke['name'] }}</h1>
+                <img src="{{ poke['sprites']['front_default'] }}">
+                <!--  -->
+                <hr>
+                {% if poke['types']|length == 1 %}
+                    <p class="tipo"><b>Tipo: </b>{{ poke['types'][0]['type']['name'] }}</p>
+                {% else %}
+                    <p class="tipo"><b>Tipo: </b>{{ poke['types'][0]['type']['name'] }} / {{ poke['types'][1]['type']['name'] }}</p>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+
+
+
+   

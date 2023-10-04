@@ -21,7 +21,7 @@ def criar_app(url_db=None):
     app = Flask(__name__)
 
     load_dotenv()
-    app.config["API_TITLE"] = "API REST do BD da PokeLista"
+    app.config["API_TITLE"] = "API REST da coleta de CO2 - PI5 UNIVESP"
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.3"
     app.config["OPENAPI_URL_PREFIX"] = "/"
@@ -37,10 +37,6 @@ def criar_app(url_db=None):
         db.create_all()
 
     api.register_blueprint(BlueprintBusca)
-
-    @app.route("/")
-    def home():
-        return "Pokémon Search API"
 
     return app
 app = criar_app()

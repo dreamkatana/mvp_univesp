@@ -6,8 +6,7 @@ from db import db
 from models.busca import ModeloBusca  # Assuming you have this model in models.busca
 from schemas import ModeloBuscaSchema  # Assuming you have this schema in schemas
 
-blp = Blueprint("Buscas", "buscas", description="Operações nas buscas")
-
+blp = Blueprint("Buscas", "buscas", description="Operações na tabela de coleta de CO2")
 
 @blp.route("/searches/<int:id>")
 class Busca(MethodView):
@@ -28,7 +27,9 @@ class Busca(MethodView):
         busca = ModeloBusca.query.get(id)
 
         if busca:
-            busca.pokemon_name = dados_busca["pokemon_name"]
+            busca.hora = dados_busca["hora"]  # Updated to handle hora
+            busca.CO = dados_busca["CO"]
+            busca.coleta = dados_busca["coleta"]
         else:
             busca = ModeloBusca(id=id, **dados_busca)
 
@@ -36,7 +37,6 @@ class Busca(MethodView):
         db.session.commit()
 
         return busca
-
 
 @blp.route("/searches")
 class ListaBusca(MethodView):

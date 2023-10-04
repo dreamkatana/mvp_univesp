@@ -1,24 +1,63 @@
 {% extends "layout.html" %}
 {% block title %}
-    Tabela de Acessos 
+    Relatórios
 {% endblock %}
 {% block content %}
-    <table class="centralized-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>IP Address</th>
-                <th>Nome Pokemon</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for search in searches %}
-            <tr>
-                <td>{{ search.id }}</td>
-                <td>{{ search.ip_address }}</td>
-                <td>{{ search.pokemon_name }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+
+    <h1> Concentração de monóxido de carbono no ar </h1>
+
+    <div>
+    O monóxido de carbono é um gás poluente tóxico, emitido pela combustão incompleta de combustíveis que possuem carbono em sua composição. Em caso de inalação, pode causar intoxicação por asfixia química em pouco tempo de exposição.  
+    Tanto pessoas quanto animais estão sujeitas a envenenamento por esse gás.
+    </div>
+
+    <div>
+    Após a inalação e difusão pela corrente sanguínea, ocorre uma interação entre o monóxido de carbono e a hemoglobina contida no sangue (responsável pelo transporte de gás oxigênio, O2, pelo corpo), formando a carboxi-hemoglobina.
+    É importe ressaltar que o monóxido de carbono possui uma afinidade com a hemoglobina de 200 a 300 vezes maior do que o oxigênio, o que provoca uma diminuição na quantidade de O2 distribuída pelos tecidos, causando asfixia.
+
+    </div>
+
+    <div>
+    <p>
+    Em baixas concentrações, em torno de 50 ppm, o monóxido pode causar dores de cabeça leves, náuseas e sintomas de envenenamentos moderados. Ao elevar essa concentração para 400 ppm, a inalação de monóxido de carbono pode causar fraqueza, tontura, fortes dores de cabeça e vômito.
+    Acima dessa quantidade, a intoxicação pode levar a sintomas mais graves, como convulsões, alteração do ritmo cardíaco, dificuldades na respiração, intoxicação do sistema nervoso central e, em casos mais severos, pode ocasionar a morte.
+    </p>
+    </div>
+
+    <div>
+    <p>
+    A intoxicação por monóxido de carbono pode ser evitada por meios de prevenção contra possíveis vazamentos desse gás. Tais meios vão desde a manutenção regular de equipamentos com possível emissão de monóxido de carbono até a substituição desses por outros que não ofereçam tais riscos.  Também é possível realizar a instalação de detectores de CO em ambientes fechados.
+    </p>
+    </div>
+
+    <div class='tableauPlaceholder' id='viz1693759223022' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='História 1 ' src='https://public.tableau.com/static/images/Qu/Qualidadedoar_16937563603570/Histria1/1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='Qualidadedoar_16937563603570/Histria1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Qu/Qualidadedoar_16937563603570/Histria1/1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='pt-BR' />
+        </object>
+    </div> 
+    <script type='text/javascript'> 
+        var divElement = document.getElementById('viz1693759223022'); 
+        var vizElement = divElement.getElementsByTagName('object')[0]; 
+        vizElement.style.width='1016px';vizElement.style.height='991px'; 
+        var scriptElement = document.createElement('script'); 
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
 {% endblock %}
